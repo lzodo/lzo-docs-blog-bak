@@ -18,17 +18,31 @@ module.exports = {
     // ],
     
     docs: {
-      Guides: [
+      客户端: [
         // 'doc3',
         {
           type: 'category',
-          label: 'Docs',
-          items: ['doc1', 'doc2'],
+          label: 'JavaScript',
+          items: [
+            'web/script-es6',
+            'web/script-js',
+            'web/script-model-promise'
+          ],
         },
         {
           type: 'category',
-          label: 'Docs2',
-          items: ['doc3'],
+          label: 'Style',
+          items: ['web/style-css3','web/style-flex'],
+        },
+        // {
+        //   type: 'category',
+        //   label: '框架与库',
+        //   items: ['doc1'],
+        // },
+        {
+          type: 'category',
+          label: '杂项',
+          items: ['doc1','doc2','doc3','mdx'],
         },
       ],
     },

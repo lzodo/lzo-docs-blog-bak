@@ -1,6 +1,6 @@
 module.exports = {
-  title: 'WEB前端开发',
-  tagline: 'The tagline of my site',
+  title: 'WEB - 前端开发',
+  tagline: "Don't always learn secretly",
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
   // baseUrl: '/blog/',
