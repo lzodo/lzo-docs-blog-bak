@@ -46,7 +46,9 @@ module.exports = {
         },
       ],
       其他:[
-        'other/other-markdown'
+        'other/other-markdown',
+        'other/other-nvm',
+
       ]
     },
   
