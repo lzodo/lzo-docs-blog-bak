@@ -13,7 +13,7 @@ title: flex基础
 
 3. 元素是跟着主轴方向排列的,主轴的方向最终取决于flex-direction的值
 
-### 父容器常用属性：
+### 父容器常用属性
 
 flex-direction: 设置主轴方向
 ```css
@@ -66,7 +66,7 @@ align-items:
 
 > flex-flow: 符合属性 相当于设置了flex-directiion 和 flex-warp , :column warp 直接设置主轴方向与是否换行
 
-### 子容器常用属性:
+### 子容器常用属性
 
 ```css
 flex:null | flex-grow flex-shrink flex-basis;
@@ -84,6 +84,10 @@ order: 定义子项的排列顺序(前后顺序,数值越小越靠前 默认0,�
 flex-shrink:设置缩小比例(不换行时单所有元素宽度之和超过父容器时),默认都是1
 ```
 
-
+<!--  <iframe  
+ height='350px'
+ width='100%' 
+ src="http://mctool.wangmingchang.com/index/jspay/dashang">
+ </iframe> -->
 
 

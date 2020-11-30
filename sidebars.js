@@ -45,6 +45,9 @@ module.exports = {
           items: ['doc1','doc2','doc3','mdx'],
         },
       ],
+      其他:[
+        'other/other-markdown'
+      ]
     },
   
 };
