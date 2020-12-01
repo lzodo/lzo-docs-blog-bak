@@ -34,11 +34,11 @@ module.exports = {
           label: 'Style',
           items: ['web/style-css3','web/style-flex'],
         },
-        // {
-        //   type: 'category',
-        //   label: '框架与库',
-        //   items: ['doc1'],
-        // },
+        {
+          type: 'category',
+          label: 'Vue',
+          items: ['web/vue-vuecli'],
+        },
         {
           type: 'category',
           label: '杂项',
@@ -48,6 +48,8 @@ module.exports = {
       其他:[
         'other/other-markdown',
         'other/other-nvm',
+        'other/other-plugin',
+        'other/other-weblinks'
 
       ]
     },

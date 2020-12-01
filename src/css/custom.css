@@ -53,8 +53,17 @@ h6 {
 /*=====================================================================================*/
 
 h1{
-  font-size: 2rem !important;
+  font-size: 1.8rem !important;
 }
+h2{
+  font-size: 1.4rem !important;
+}
+h3{
+  font-size: 1.1rem !important;
+}
+/*h4{
+  font-size: 0.9rem !important;
+}*/
 .margin-vert--xl{
   display: none;
 }
