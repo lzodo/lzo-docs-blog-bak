@@ -26,7 +26,8 @@ module.exports = {
           items: [
             'web/script-es6',
             'web/script-js',
-            'web/script-model-promise'
+            'web/script-model-promise',
+            
           ],
         },
         {
@@ -38,6 +39,11 @@ module.exports = {
           type: 'category',
           label: 'Vue',
           items: ['web/vue-vuecli'],
+        },
+        {
+          type: 'category',
+          label: '自动化构建工具',
+          items: ['web/web-tool-gulp'],
         },
         {
           type: 'category',
