@@ -38,7 +38,7 @@ module.exports = {
         {
           type: 'category',
           label: 'Vue',
-          items: ['web/vue-vuecli'],
+          items: ['web/vue-vuecli','web/web-app-uniapp'],
         },
         {
           type: 'category',
