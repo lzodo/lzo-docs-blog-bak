@@ -45,17 +45,17 @@ module.exports = {
           label: '自动化构建',
           items: ['web/web-tool-npm','web/web-tool-gulp'],
         },
-        {
-          type: 'category',
-          label: '杂项',
-          items: ['doc1','doc2','doc3','mdx'],
-        },
+        // {
+        //   type: 'category',
+        //   label: '杂项',
+        //   items: ['doc1','doc2','doc3','mdx'],
+        // },
       ],
       其他:[
         'other/other-markdown',
         'other/other-nvm',
         'other/other-plugin',
-        'other/other-weblinks'
+        'other-weblinks'
 
       ]
     },

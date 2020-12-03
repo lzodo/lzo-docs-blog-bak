@@ -19,7 +19,7 @@ module.exports = {
       },
       items: [
         {
-          to: 'docs/',
+          to: 'docs/other-weblinks',
           activeBasePath: 'docs',
           label: '文档',
           position: 'right',
@@ -36,32 +36,28 @@ module.exports = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: '文档',
           items: [
             {
-              label: 'Style Guide',
-              to: 'docs/',
+              label: '收藏网址',
+              to: 'docs/other-weblinks',
             },
             {
-              label: 'Second Doc',
-              to: 'docs/doc2/',
+              label: 'Markdown',
+              to: 'docs/other/other-markdown',
             },
           ],
         },
         {
-          title: 'Community',
+          title: '外部链接',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: '码云',
+              href: 'https://gitee.com/liaozhongxun',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
+              label: 'GitHub',
+              href: 'https://github.com/liaozhongxun',
             },
           ],
         },
@@ -71,10 +67,6 @@ module.exports = {
             {
               label: '博客',
               to: 'blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/liaozhongxun',
             },
           ],
         },

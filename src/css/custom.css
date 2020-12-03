@@ -67,3 +67,9 @@ h3{
 .margin-vert--xl{
   display: none;
 }
+
+
+/*处理注释倾斜问题*/
+.token-line .comment{
+  font-style: normal !important;
+}
