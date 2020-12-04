@@ -7,6 +7,8 @@ title: vue-cli与脚手架
 安装
 ```
 npm i -g @vue/cli
+npm i -g @vue/cli@3.x
+
 yarn global add @vue/cli
 ```
 > 安装成功后能在命令行使用vue相关指令

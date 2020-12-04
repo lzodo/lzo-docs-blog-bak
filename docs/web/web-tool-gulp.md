@@ -5,11 +5,11 @@ title: 自动化构建工具 gulp
 ```shell
 npm install -g gulp
 ```
-在普通项目中使用
+在普通项目中使用[我的gulp demo](https://github.com/liaozhongxun/lzo-gulp)
 
 ```shell
 npm init -y  //初始化项目的npm配置文件
-npm install -D gulp //安装gulp到本地项目(仅开发使用 -S)
+npm install -D gulp //安装gulp到本地项目(仅开发使用 -D)
 npm install -D gulp-autoprefixer  //安装gulp相关插件
 npm install -D gulp-rename  //重名插件
 
