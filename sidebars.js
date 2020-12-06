@@ -27,6 +27,7 @@ module.exports = {
             'web/script-es6',
             'web/script-js',
             'web/jsmodel/script-model-promise',
+            'web/jsmodel/script-model-server',
           ],
         },
         {
@@ -43,6 +44,11 @@ module.exports = {
           type: 'category',
           label: '自动化构建',
           items: ['web/web-tool-npm','web/web-tool-gulp'],
+        },
+        {
+          type: 'category',
+          label: '库',
+          items: ['web/library/web-library-mockjs','web/library/web-library-threejs'],
         },
         // {
         //   type: 'category',

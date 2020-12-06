@@ -1,5 +1,5 @@
 ---
-title: uniapp
+title: uni-app
 ---
 > uni-app基于vue和微信小程序, 一套代码可以发布到ios、Android、h5、以及各种小程序平台
 
@@ -18,6 +18,13 @@ title: uniapp
 标签靠近小程序规范
 [小程序文档](https://developers.weixin.qq.com/miniprogram/dev/api/base/wx.canIUse.html)
 
+### 条件注释跨端兼容
+[条件编译](https://uniapp.dcloud.io/platform?id=%e6%9d%a1%e4%bb%b6%e7%bc%96%e8%af%91)
+```javascript
+#ifndef H5
+需条件编译的代码
+#endif
+```
 ## 目录结构与项目配置
 ### 目录结构
 ```python
@@ -127,6 +134,31 @@ hover-start-time  多久延迟出现hover类效果
 hover-stay-time 离开后保持多久失去效果
 ...
 ```
+
+#### 创建组件
+> 创建 ：后缀名.vue文件，视为一个组件  
+> 使用 ：通过import 组件名 from "xxx"导入并通过components注册,完成之后通过标签形式使用
+
+##### 组件通讯  
+
+[组件通讯](https://uniapp.dcloud.io/collocation/frame/communication)
+> 父传子 : 以标签形式调用组件是 :data 传到子组件, 组件中:prop['data'] 接收  
+> 子传父 : this.$emit('父级自定义方法 par')， 父组件中: @par = 'xxx'  
+
+兄弟组件传值 : 
+
+```javascript
+//组件A
+//触发全局的update函数 将父子间的this换成uni
+uni.$emit('update',{msg:'页面更新'})
+
+//组件B
+//监听全局的自定义事件update
+uni.$on('update',function(data){
+	console.log('监听到事件来自 update ，携带参数 msg 为：' + data.msg);
+})
+```
+
 ### uniapp中的样式
 不同点
 + rpx  
@@ -221,5 +253,132 @@ hover-stay-time 离开后保持多久失去效果
 ```
 
 #### 组件的生命周期
+```javascript
+//组件中
+<script>
+	export default {
+		data() {
+			return {
+				title: 'Hello'
+			}
+		},
+		beforeCreate(){
+			console.log("在实例初始化之后 无data数据")
+		},
+		created() {
+			console.log("在实例创建完成后 有data数据"")
+		},
+		beforeMount(){
+			console.log("挂载到实例上去之前调用 无dom节点")
+		},
+		mounted(){
+			console.log("挂载到实例上去之后调用  有dom节点")
+		},
+		beforeUpdate 
+		updated //数据更新 仅支持h5
+		beforeDestroy
+		destroyed //组件销毁
 
+		......
+		methods: {
+
+		}
+	}
+</script>
+```
+
+## 交互
 ### 网络请求
+[uni request](https://uniapp.dcloud.io/api/request/request?id=request)
+
+```javascript
+uni.request({
+	url
+	method
+    data
+    header
+	success: (res) => {}
+	...
+});
+```
+
+### 数据缓存
+[文档路径](https://uniapp.dcloud.io/api/storage/storage?id=setstorage)
+
+```javascript
+uni.setStorage({ //存储数据   设置的是localStorage
+	key: 'storage_key',
+	data: 'hello',
+	success: function () {
+		console.log('设置缓存success');
+	}
+});
+
+uni.getStorage({ //获取数据 异步不会阻塞，有时可能获取不到
+	key: 'storage_key',
+	success: function (res) {
+		console.log(res.data);
+	}
+});
+
+uni.removeStorage({ //删除数据
+	key: 'storage_key',
+	success: function (res) {
+		console.log('删除success');
+	}
+});
+
+//加Sync的同步接口
+ uni.setStorageSync('storage_key', 'hello');
+ const value = uni.getStorageSync('storage_key'); //同步的一定能获取到
+ uni.removeStorageSync('storage_key');
+```
+
+### 图片上传
+[媒体图片](https://uniapp.dcloud.io/api/media/image?id=chooseimage)
+```javascript
+uni.chooseImage({
+	count: 6, 
+	success: function (res) {
+		console.log(res.tempFilePaths); //得到路径图片路径
+	}
+});
+
+//通过  uni.uploadFile 传到自己的服务器
+
+```
+### 导航跳转
+#### 组件 navigator   
+[navigator](https://uniapp.dcloud.io/component/navigator)
+```html
+<!--open-type='switchTab' 设置了才能跳转tabBar 页面-->
+<!--open-type='redirect' 替换到新页面 无返回-->
+<navigator url="pages/about/new_file" hover-class="navigator-hover" open-type='switchTab'>
+	<button type="default">跳转到关于页面</button>
+</navigator>
+```
+
+#### 路由跳转   
+[uni.navigateTo](https://uniapp.dcloud.io/api/router?id=navigateto)
+
+```javascript
+uni.navigateTo({
+    url: 'pages/about/new_file'
+});
+
+//tabBar页面，并关闭其他非tabBar页面
+uni.switchTab({ 
+    url: 'pages/about/new_file'
+});
+
+//替换到新页面
+uni.redirectTo({
+    url: 'xxx'
+});
+
+//跳转通过?传的参数，通过生命周期onLoad获取参数
+
+
+```
+
+## 发行
