@@ -3,15 +3,27 @@ title: 插件
 ---
 
 ## npm插件
-### puer 轻松开起本地服务器
+### puer 
+> 轻松开起本地服务器  
+
 ```shell
 npm install puer -g
 //直接使用
 puer --port xxxx 
 ```
 
-### bower 第三方插件下载工具
-> 也是一个包管理器
+### nodemon 
+> node服务器改动时自动重启服务  
+
+```shell
+npm install nodemon -g
+//直接使用
+nodemon server.js  
+```
+
+### bower 
+> 第三方插件下载工具,也是一个包管理器
+
 ```shell
 npm install bower -g
 //直接使用

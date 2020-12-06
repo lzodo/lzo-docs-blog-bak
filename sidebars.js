@@ -28,6 +28,7 @@ module.exports = {
             'web/script-js',
             'web/jsmodel/script-model-promise',
             'web/jsmodel/script-model-server',
+            'web/jsmodel/script-model-browser'
           ],
         },
         {
