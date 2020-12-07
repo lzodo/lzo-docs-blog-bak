@@ -44,7 +44,7 @@ module.exports = {
         {
           type: 'category',
           label: '自动化构建',
-          items: ['web/web-tool-npm','web/web-tool-gulp'],
+          items: ['web/tool/web-tool-npm','web/tool/web-tool-gulp','web/tool/web-tool-fis3'],
         },
         {
           type: 'category',

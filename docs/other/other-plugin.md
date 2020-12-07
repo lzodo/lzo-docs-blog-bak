@@ -31,9 +31,6 @@ bower install xxxx
 ```
 ---
 ## 编辑器插件
-
----
-## npm配合编辑器
 ### autoprefixer (静态文件操作css3兼容前缀)
 
 1、安装
@@ -46,7 +43,8 @@ npm install -g 	autoprefixer
 
 ---
 ## web常用插件
-### 日期时间
+### 
++ [日期时间(Day.js)](https://www.cnblogs.com/cjrfan/p/9154539.html)
 
 ## jQuery插件
 ### fullpage.js 

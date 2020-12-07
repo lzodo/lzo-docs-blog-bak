@@ -157,32 +157,41 @@ title: 服务器请求
 ## Fetch
 > Fetch API 提供了一个 JavaScript接口，用于访问和操纵HTTP管道的部分,这种功能以前是使用 XMLHttpRequest实现的。Fetch提供了一个更好的替代方法
 
+[参考文档](https://zh.javascript.info/fetch)
 ```html
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>Fetch</title>
-	</head>
-	<body>
-		<button onclick="getData()">get data</button>
-	</body>
-	<script>
-		function getData(){
-			fetch('http://127.0.0.1:8000/posturl',{
-				body:'name=ab&age=20',
-				method:'POST',
-				headers:{
-					'key':'val'
-				}
-			}).then(res=>{
-				return res.json()
-			}).then(res=>{
-				console.log(res)
-			})
-		}
-	</script>
+    <head>
+        <meta charset="utf-8">
+        <title>Fetch</title>
+    </head>
+    <body>
+        <button onclick="getData()">get data</button>
+    </body>
+    <script>
+        function getData(){
+            fetch('http://127.0.0.1:8888/posturl',{
+                body:'name=ab&age=20',
+                method:'POST',
+                headers:{ //这些 header 保证了 HTTP 的正确性和安全性，所以它们仅由浏览器控制
+                    'key':'val'
+                }
+            }).then(res=>{ //Response 提供了多种基于 promise 的方法，来以不同的格式访问 body,每次只能用一种
+
+                // res.text() —— 读取 res，并以文本形式返回 res
+				// res.json() —— 将 res 解析为 JSON
+				// res.formData() —— 以 FormData 对象（在 下一章 有解释）的形式返回 res
+				// res.blob() —— 以 Blob（具有类型的二进制数据）形式返回 res
+				// res.arrayBuffer() —— 以 ArrayBuffer（低级别的二进制数据）形式返回 res
+                console.log(res.headers.get('Content-Type')); //获取响应头
+                return res.json()
+            }).then(res=>{
+                console.log(res);
+            })
+        }
+    </script>
 </html>
+
 
 ```
 ---

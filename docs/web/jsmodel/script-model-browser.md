@@ -72,8 +72,11 @@ title: 浏览器知识点
     Accept: //接收类型，表示浏览器支持的MIME类型（对标服务端返回的Content-Type）
     Accept-Encoding：//浏览器支持的压缩类型,如gzip等,超出类型不能接收
     Content-Type：//客户端发送出去请求体内容的类型
-        'application/x-www-form-urlencoded': 'name=username&age=20'
+        'application/x-www-form-urlencoded': 'URLSearchParams:name=username&age=20'
         'application/json': "{name:'username',age:20}"
+        'form/multipart': "FormData 对象"
+        'Blob/BufferSource': "二进制数据"
+        'text/plain;charset=UTF-8':'字符串格式数据 默认值'
     Cache-Control: //指定请求和响应遵循的缓存机制，如no-cache
     If-Modified-Since：//对应服务端的Last-Modified，用来匹配看文件是否变动，只能精确到1s之内，http1.0中
     Expires：//缓存控制，在这个时间内不会请求，直接使用缓存，http1.0，而且是服务端时间
