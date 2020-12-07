@@ -61,6 +61,7 @@ module.exports = {
         'other/other-markdown',
         'other/other-nvm',
         'other/other-plugin',
+		'other/other-git',
         'other-weblinks'
 
       ]
