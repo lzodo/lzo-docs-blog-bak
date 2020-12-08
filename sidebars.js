@@ -57,6 +57,16 @@ module.exports = {
         //   items: ['doc1','doc2','doc3','mdx'],
         // },
       ],
+      服务器: [
+        // 'doc3',
+        {
+          type: 'category',
+          label: 'NodeJS',
+          items: [
+            'server/server-nodejs',
+          ],
+        },
+      ],
       其他:[
         'other/other-markdown',
         'other/other-nvm',
