@@ -113,6 +113,7 @@ git branch -a # 查看本地与远程的分支（远程分支前面会有remotes
 
 git branch <branch name> # 创建本地分支
 git checkout <branch name> # 切换分支
+git checkout -b <branch name> # 创建并切换
 git push origin <branch name> # 将本地分支推送到远程
 
 git merge <branch name> # 将指定分支版本库内容合并到当前分支
@@ -154,15 +155,29 @@ doc/*.txt # 忽略doc文件夹下的.txt文件
 doc/**/*.txt # 忽略doc下所有.txt文件
 
 ```
-## SSH
+## GIT协议
+git支持一下四种协议
++ 本地协议(Local)
++ HTTPS 协议
++ SSH 协议
++ GiT协议
 
-1、git下输入  ssh-keygen  连续回车生成公私钥（公私钥与本台计算机有关）
+> GitHub与码云目前常用HTTPS与SSH协议,平时大多使用HTTPS协议
+
+```shell
+git clone https://github.com/liaozhongxun/xxx.git
+```
+
+### SSH
+> SSH (Secure Shell 安全外壳协议) 的缩写 可以不要每次输入用户名密码，而是利用公钥和私钥进行比对
+
+1、git下输入  ssh-keygen|ssh-keygen -t rsa  连续回车生成公私钥（公私钥与本台计算机有关）
 
 2、公私钥匙用户家目录下的 .ssh 文件夹中
    私钥 : id_rsa 
    公钥 : id_rsa.pub
 
 3、复制公钥的内容到远程仓库(GitHub 或 开源中国等）
-   添加成功后本台计算机就能和远程仓库进行交了
+   添加成功后本台计算机就能和远程仓库进行ssh交互了
 
 [参考资料 后续继续](https://www.bilibili.com/video/BV1yz4y1y7RQ?p=40)
