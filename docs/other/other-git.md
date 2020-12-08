@@ -136,7 +136,7 @@ git push origin <tag name> # 将指定标签推送到远程
 git checkout -b <branch name> <tag name> # 检出指定分支 指定标签的代码
 
 git tag -d <tag name> # 删除标签
-git push origin :refs/tag/<tag name> # 删除远程标签
+git push origin :refs/tags/<tag name> # 删除远程标签
 ```
 
 ### 文件操作
