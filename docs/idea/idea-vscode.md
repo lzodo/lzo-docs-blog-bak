@@ -6,6 +6,7 @@ title: VsCode 编辑器
 
 ```javascript
 /**  快速注释
+光标定义到变量 -> 右键重命名符号(F2) -> 改名回车 全部引用都会一起改变
 ```
 
 ## 插件
@@ -55,6 +56,7 @@ title: VsCode 编辑器
 - Vetur (vue必装)
 - EditorConfig (是一种被各种编辑器广泛支持的配置 .editorconfig)
 - live-server (可运行的静态文件右键直接开启服务 电脑上也要全局安装)
+- Better Comments (! * todo //美化注释)
 
 ### css3 兼容前缀
 
