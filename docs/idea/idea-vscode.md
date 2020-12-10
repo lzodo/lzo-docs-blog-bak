@@ -57,18 +57,7 @@ title: VsCode 编辑器
 - EditorConfig (是一种被各种编辑器广泛支持的配置 .editorconfig)
 - live-server (可运行的静态文件右键直接开启服务 电脑上也要全局安装)
 - Better Comments (! * todo //美化注释)
-
-### css3 兼容前缀
-
-1、安装
-
-```
-npm install -g 	autoprefixer
-```
-
-2、vscode 找到 Autoprefixer  
-3、在 css、scss、less 等样式页面，按 shift+ctrl+p 调出搜索宽 选择 autoprefixer CSS  
-4、vscode 上 3.x 无效的话可以先转 2.2.0 版本
+- Autoprefixer  2.2.0 (前缀 shift+ctrl+p 选择 autoprefixer CSS,电脑上也要全局安装)
 
 ## 快捷键
 
