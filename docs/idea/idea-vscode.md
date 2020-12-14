@@ -58,6 +58,8 @@ title: VsCode 编辑器
 - live-server (可运行的静态文件右键直接开启服务 电脑上也要全局安装)
 - Better Comments (! * todo //美化注释)
 - Autoprefixer  2.2.0 (前缀 shift+ctrl+p 选择 autoprefixer CSS,电脑上也要全局安装)
+- Code Runner (右键运行各种服务端代码)
+
 
 ## 快捷键
 
@@ -66,3 +68,8 @@ title: VsCode 编辑器
 ## editorconfig 配置
 
 [参考资料](https://juejin.cn/post/6860440041039069191#heading-10)
+
+## Markdown
+- Markdown All in One (markdown快捷键与格式化)
+- Markdown Preview Enhanced (markdown预览)
+
